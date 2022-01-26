@@ -15,14 +15,26 @@
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">type</label>
-            <select name="type" id="type" class="form-label">
-                <option value="comic book">comic book</option>
-                <option value="graphic novel">graphic novel</option>
+            <select name="type" id="type" class="form-control">
+                <option value="comic">comic book</option>
+                <option value="novel">graphic novel</option>
             </select>
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">thumb</label>
-             <input type="text" class="form-control" id="thumb" name="thumb">
+             <input type="text" class="form-control" id="thumb" name="thumb" >
+        </div>
+        <div class="mb-3">
+            <label for="thsale_date" class="form-label">sale_date</label>
+             <input type="text" class="form-control" id="sale_date" name="sale_date" >
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">price</label>
+             <input type="text" class="form-control" id="price" name="price" >
+        </div>
+        <div class="mb-3">
+            <label for="series" class="form-label">series</label>
+             <input type="text" class="form-control" id="series" name="series" >
         </div>
         <div class="mb-3">
             <button type="submit" class="btn btn-primary">
