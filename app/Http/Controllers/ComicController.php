@@ -14,7 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-       $comics = Comic::orderBy('id', 'desc')->get();
+       $comics = Comic::all();
 
        return view('comics.index', compact('comics'));
     }
@@ -72,7 +72,13 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::find($id);
+
+        if($comic){
+            return view('comics.edit', compact('comic'));
+        }
+
+        abort(404);
     }
 
     /**
@@ -84,7 +90,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        dump($data);
+
+        $comic = Comic::find($id);
+
+        $comic->update($data);
     }
 
     /**
