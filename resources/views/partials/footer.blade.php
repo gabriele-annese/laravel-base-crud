@@ -1,1 +1,1 @@
-<h4 class="text-center mt-5">footer ok</h4>
+<h4 class="text-center mt-5">Comics Books-footer</h4>

@@ -3,6 +3,12 @@
 @section('main-content')
     <div class="container mt-5">
         <h1 class="text-center">Our Comics</h1>
+        @if (session('deleted'))
+            <div class="alert alert-success">
+                <strong>{{session('deleted')}}</strong>
+                successfully deleted.
+            </div>
+        @endif
         <table class="table">
             <thead>
                 <tr>
@@ -29,7 +35,8 @@
                                 @csrf
                                 @method('DELETE')
 
-                                <input type="submit" class="btn btn-danger" value="DELETE">
+                                <input type="submit" class="btn btn-danger" value="DELETE"
+                                onclick="return confirm('Are you sure you delete this comic ?')">
                             </form>
                         </td>
                     </tr>
