@@ -24,7 +24,14 @@
                         <td>
                             <a class="btn btn-primary" href="{{route('comics.edit', $comic->id)}}">EDIT</a>
                         </td>
-                        <td>DELETE</td>
+                        <td>
+                            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+
+                                <input type="submit" class="btn btn-danger" value="DELETE">
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
